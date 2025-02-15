@@ -3,7 +3,7 @@
 #define PARTITION_NUMBER(X) "1"
 #define MOUNT_POINT(X) "/sdb1"
 
-#define DRIVE_NAME_SIZE++ X(4)
+#define DRIVE_NAME_SIZE(X) X(4)
 #define COMMAND_BUFFER_SIZE(X) X(32)
 
 //code
@@ -15,12 +15,12 @@ int main() {
 	FILE *fp;
 	char buf[4];
 	fp = popen(GREP_COMMAND(DRIVE_SIZE()), "r");
-	if (fp == NULL)
+	if (fp == NULL) {
 		printf("Failed to locate" DRIVE_SIZE() " drive!, exiting\n");
 		exit(1);
 	}
 
-	if(fgets(buf, DRIVE_NAME_SIZE++  , fp) != NULL) {
+	if(fgets(buf, DRIVE_NAME_SIZE(), fp) != NULL) {
 		printf(DRIVE_SIZE() " drive identified as %s!\n", buf);
 	}
 	char command [COMMAND_BUFFER_SIZE()];

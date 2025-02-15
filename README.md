@@ -26,7 +26,7 @@
 ### Drive Size:
  To find the drive size you need for your drive run 'lsblk' in a terminal. Determine which drive you want to be mounted, and put in the size exactly as it is listed in quotation marks.
 
-### Drive Name Size(++):
+### Drive Name Size:
  The Drive Name Size is the number of characters in the drive name PLUS ONE! The drive will always have the same number of letters, even if they are different letters, so if the drive is currently sdb, that is three characters, adding one makes it 4, so input 4. If the drive is currently nvme0n1, that is 7 characters, so input 8.  
 
 ### Partition Number:
